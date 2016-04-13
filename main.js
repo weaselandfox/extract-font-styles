@@ -1,9 +1,10 @@
-var allElements = document.getElementsByTagName('*');
 var fontStyles = [];
-var computedStyle;
-var styles;
 
 var extractFontStyles = function () {
+  var allElements = document.getElementsByTagName('*');
+  var computedStyle;
+  var styles;
+
   [].forEach.call(allElements, function (element) {
     computedStyle = window.getComputedStyle(element);
     styles = JSON.stringify({
