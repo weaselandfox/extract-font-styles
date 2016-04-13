@@ -9,7 +9,9 @@ var extractFontStyles = function () {
     styles = JSON.stringify({
       family: computedStyle.getPropertyValue('font-family'),
       size: computedStyle.getPropertyValue('font-size'),
-      weight: computedStyle.getPropertyValue('font-weight')
+      weight: computedStyle.getPropertyValue('font-weight'),
+      lineHeight: computedStyle.getPropertyValue('line-height'),
+      letterSpacing: computedStyle.getPropertyValue('letter-spacing')
     });
 
     if (fontStyles.indexOf(styles) === -1) {
